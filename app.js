@@ -27,7 +27,6 @@ app.get("/customers/:id", (req, res)=>{
 
 app.post("/customers/create", (req, res)=>{
     let client = req.body;
-    console.table(client);
     clients.push(client);
     fs.writeFileSync("./clients.json", JSON.stringify(clients));
     res.send(client);
