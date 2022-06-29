@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({
     extended: false 
 }));
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const clients = JSON.parse(fs.readFileSync("./clients.json"));
 
